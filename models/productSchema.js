@@ -2,7 +2,10 @@ const mongoose = require('mongoose');
 const { route } = require('../app');
 
 const productSchema = new mongoose.Schema({
-  productTag: { type: String },
+  productTag: {
+    type: String,
+    unique: true
+  },
   name: { type: String },
   brandName: { type: String },
   quantity: { type: Number },
